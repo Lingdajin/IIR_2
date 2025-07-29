@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jul 29 18:25:48 2025
+Tue Jul 29 20:54:41 2025
 
 
 Command Line:  synthesis -f IIR_2_impl1_lattice.synproj -gui 
@@ -35,7 +35,7 @@ Using performance grade 4.
 
 INFO - synthesis: User-Selected Strategy Settings
 Optimization goal = Balanced
-The -top option is not used.
+Top-level module name = IIR.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -71,14 +71,12 @@ NGD file = IIR_2_impl1.ngd
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
-WARNING - synthesis: Setting IIR as the top-level module. To specify the top-level module explicitly, use the -top option.
 Technology check ok...
 
 Analyzing Verilog file D:/Program/Diamond/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
 Analyzing Verilog file d:/codefield/verilog/diamond_design/iir_2/source/iir.v. VERI-1482
-WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(55): literal value truncated to fit in 16 bits. VERI-1208
 WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(75): identifier x is used before its declaration. VERI-1875
 Analyzing Verilog file D:/Program/Diamond/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): IIR
@@ -96,10 +94,6 @@ WARNING - synthesis: Bit 8 of Register x_d2 is stuck at Zero
 
 
 
-
-The number of registers created due to operator pipelining is 30.
-
-WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(108): Register x_d1_ret3_i24 is stuck at Zero. VDB-5013
 GSR instance connected to net rst_n_c.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -113,13 +107,14 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file IIR_2_impl1.ngd.
 
 ################### Begin Area Report (IIR)######################
-Number of register bits => 74 of 4635 (1 % )
-CCU2D => 341
-FD1S3AX => 66
+Number of register bits => 43 of 4635 (0 % )
+CCU2D => 243
+FD1P3AX => 34
+FD1S3AX => 1
 FD1S3IX => 8
 GSR => 1
 IB => 10
-LUT4 => 36
+LUT4 => 37
 OB => 10
 ################### End Area Report ##################
 
@@ -130,22 +125,23 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_c, loads : 74
+  Net : clk_c, loads : 43
 Clock Enable Nets
-Number of Clock Enables: 0
-Top 0 highest fanout Clock Enables:
+Number of Clock Enables: 1
+Top 1 highest fanout Clock Enables:
+  Net : clk_c_enable_34, loads : 34
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : y_d2_8, loads : 24
-  Net : y_d2_7, loads : 22
-  Net : y_d2_6, loads : 22
-  Net : y_d2_5, loads : 22
-  Net : y_d2_4, loads : 22
-  Net : y_d2_3, loads : 22
-  Net : y_d2_2, loads : 22
-  Net : y_d2_1, loads : 21
-  Net : term_b1_1, loads : 20
-  Net : x_d1_c_5, loads : 18
+  Net : clk_c_enable_34, loads : 34
+  Net : y_d1_7, loads : 12
+  Net : y_d1_6, loads : 12
+  Net : y_d1_5, loads : 12
+  Net : y_d1_4, loads : 12
+  Net : y_d1_3, loads : 12
+  Net : y_d1_2, loads : 12
+  Net : y_d1_1, loads : 12
+  Net : y_d2_8, loads : 11
+  Net : term_b1_1, loads : 11
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -155,7 +151,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_c]                   |  200.000 MHz|   49.643 MHz|    21 *
+clk0 [get_nets clk_c]                   |  200.000 MHz|   47.526 MHz|    22 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -163,8 +159,8 @@ clk0 [get_nets clk_c]                   |  200.000 MHz|   49.643 MHz|    21 *
 1 constraints not met.
 
 
-Peak Memory Usage: 77.371  MB
+Peak Memory Usage: 75.863  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.969  secs
+Elapsed CPU time for LSE flow : 0.734  secs
 --------------------------------------------------------------

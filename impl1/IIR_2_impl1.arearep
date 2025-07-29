@@ -1,14 +1,15 @@
 ----------------------------------------------------------------------
 Report for cell IIR.TECH
-Register bits:  74 of 4635 (1.597%)
+Register bits:  43 of 4635 (0.928%)
 I/O cells:      20
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       341          100.0
-                            FD1S3AX        66          100.0
+                              CCU2D       243          100.0
+                            FD1P3AX        34          100.0
+                            FD1S3AX         1          100.0
                             FD1S3IX         8          100.0
                                 GSR         1          100.0
                                  IB        10          100.0
-                               LUT4        36          100.0
+                               LUT4        37          100.0
                                  OB        10          100.0
-                              TOTAL       472
+                              TOTAL       344

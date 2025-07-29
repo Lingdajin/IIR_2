@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jul 29 18:25:48 2025
+Tue Jul 29 20:54:41 2025
 
 
 Command Line:  synthesis -f IIR_2_impl1_lattice.synproj -gui 
@@ -38,7 +38,7 @@ Using performance grade 4.
 
     <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
 Optimization goal = Balanced
-The -top option is not used.
+Top-level module name = IIR.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -74,14 +74,12 @@ NGD file = IIR_2_impl1.ngd
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
-    <postMsg mid="35001200" type="Warning" dynamic="1" navigation="0" arg0="IIR"  />
 Technology check ok...
 
 Analyzing Verilog file D:/Program/Diamond/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
 Analyzing Verilog file d:/codefield/verilog/diamond_design/iir_2/source/iir.v. VERI-1482
-    <postMsg mid="35901208" type="Warning" dynamic="2" navigation="2" arg0="d:/codefield/verilog/diamond_design/iir_2/source/iir.v(55): " arg1="16" arg2="d:/codefield/verilog/diamond_design/iir_2/source/iir.v" arg3="55"  />
     <postMsg mid="35901875" type="Warning" dynamic="2" navigation="2" arg0="d:/codefield/verilog/diamond_design/iir_2/source/iir.v(75): " arg1="x" arg2="d:/codefield/verilog/diamond_design/iir_2/source/iir.v" arg3="75"  />
 Analyzing Verilog file D:/Program/Diamond/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): IIR
@@ -100,10 +98,6 @@ Top-level module name = IIR.
 
 
 
-
-The number of registers created due to operator pipelining is 30.
-
-    <postMsg mid="35935013" type="Warning" dynamic="2" navigation="2" arg0="d:/codefield/verilog/diamond_design/iir_2/source/iir.v(108): " arg1="x_d1_ret3_i24" arg2="d:/codefield/verilog/diamond_design/iir_2/source/iir.v" arg3="108"  />
 GSR instance connected to net rst_n_c.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -120,19 +114,20 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-    475 blocks expanded
+    347 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file IIR_2_impl1.ngd.
 
 ################### Begin Area Report (IIR)######################
-Number of register bits => 74 of 4635 (1 % )
-CCU2D => 341
-FD1S3AX => 66
+Number of register bits => 43 of 4635 (0 % )
+CCU2D => 243
+FD1P3AX => 34
+FD1S3AX => 1
 FD1S3IX => 8
 GSR => 1
 IB => 10
-LUT4 => 36
+LUT4 => 37
 OB => 10
 ################### End Area Report ##################
 
@@ -143,22 +138,23 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : clk_c, loads : 74
+  Net : clk_c, loads : 43
 Clock Enable Nets
-Number of Clock Enables: 0
-Top 0 highest fanout Clock Enables:
+Number of Clock Enables: 1
+Top 1 highest fanout Clock Enables:
+  Net : clk_c_enable_34, loads : 34
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : y_d2_8, loads : 24
-  Net : y_d2_7, loads : 22
-  Net : y_d2_6, loads : 22
-  Net : y_d2_5, loads : 22
-  Net : y_d2_4, loads : 22
-  Net : y_d2_3, loads : 22
-  Net : y_d2_2, loads : 22
-  Net : y_d2_1, loads : 21
-  Net : term_b1_1, loads : 20
-  Net : x_d1_c_5, loads : 18
+  Net : clk_c_enable_34, loads : 34
+  Net : y_d1_7, loads : 12
+  Net : y_d1_6, loads : 12
+  Net : y_d1_5, loads : 12
+  Net : y_d1_4, loads : 12
+  Net : y_d1_3, loads : 12
+  Net : y_d1_2, loads : 12
+  Net : y_d1_1, loads : 12
+  Net : y_d2_8, loads : 11
+  Net : term_b1_1, loads : 11
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -168,7 +164,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_c]                   |  200.000 MHz|   49.643 MHz|    21 *
+clk0 [get_nets clk_c]                   |  200.000 MHz|   47.526 MHz|    22 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -176,10 +172,10 @@ clk0 [get_nets clk_c]                   |  200.000 MHz|   49.643 MHz|    21 *
 1 constraints not met.
 
 
-Peak Memory Usage: 77.371  MB
+Peak Memory Usage: 75.863  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.969  secs
+Elapsed CPU time for LSE flow : 0.734  secs
 --------------------------------------------------------------
 
 map -a "MachXO2" -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial   "IIR_2_impl1.ngd" -o "IIR_2_impl1_map.ncd" -pr "IIR_2_impl1.prf" -mp "IIR_2_impl1.mrp" -lpf "D:/CodeField/Verilog/Diamond_design/IIR_2/impl1/IIR_2_impl1.lpf" -lpf "D:/CodeField/Verilog/Diamond_design/IIR_2/IIR_2.lpf"  -c 0           
@@ -216,17 +212,17 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:     74 out of  4635 (2%)
-      PFU registers:           74 out of  4320 (2%)
+   Number of registers:     43 out of  4635 (1%)
+      PFU registers:           43 out of  4320 (1%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       360 out of  2160 (17%)
-      SLICEs as Logic/ROM:    360 out of  2160 (17%)
+   Number of SLICEs:       262 out of  2160 (12%)
+      SLICEs as Logic/ROM:    262 out of  2160 (12%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:        341 out of  2160 (16%)
-   Number of LUT4s:        718 out of  4320 (17%)
-      Number used as logic LUTs:         36
+      SLICEs as Carry:        243 out of  2160 (11%)
+   Number of LUT4s:        523 out of  4320 (12%)
+      Number used as logic LUTs:         37
       Number used as distributed RAM:     0
-      Number used as ripple logic:      682
+      Number used as ripple logic:      486
       Number used as shift registers:     0
    Number of PIO sites used: 20 + 4(JTAG) out of 105 (23%)
    Number of block RAMs:  0 out of 10 (0%)
@@ -252,22 +248,23 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  1
-     Net clk_c: 40 loads, 40 rising, 0 falling (Driver: PIO clk )
-   Number of Clock Enables:  0
+     Net clk_c: 24 loads, 24 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  1
+     Net clk_c_enable_34: 18 loads, 18 LSLICEs
    Number of LSRs:  1
-     Net n1405: 5 loads, 5 LSLICEs
+     Net n1367: 5 loads, 5 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net y_d2_8: 24 loads
-     Net y_d2_2: 22 loads
-     Net y_d2_3: 22 loads
-     Net y_d2_4: 22 loads
-     Net y_d2_5: 22 loads
-     Net y_d2_6: 22 loads
-     Net y_d2_7: 22 loads
-     Net y_d2_1: 21 loads
-     Net term_b1_1: 20 loads
-     Net x_d1_c_5: 18 loads
+     Net clk_c_enable_34: 18 loads
+     Net y_d1_1: 12 loads
+     Net y_d1_2: 12 loads
+     Net y_d1_3: 12 loads
+     Net y_d1_4: 12 loads
+     Net y_d1_5: 12 loads
+     Net y_d1_6: 12 loads
+     Net y_d1_7: 12 loads
+     Net term_b1_1: 11 loads
+     Net y_d2_8: 11 loads
  
 
    Number of warnings:  0
@@ -277,7 +274,7 @@ Design Summary:
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 54 MB
+Peak Memory Usage: 53 MB
 
 Dumping design to file IIR_2_impl1_map.ncd.
 
@@ -292,7 +289,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "IIR_2_impl1_map.ncd"
-Tue Jul 29 18:25:52 2025
+Tue Jul 29 20:54:43 2025
 
 PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 IIR_2_impl1_map.ncd IIR_2_impl1.dir/5_1.ncd IIR_2_impl1.prf
@@ -319,37 +316,38 @@ Device utilization summary:
    PIO (prelim)   20+4(JTAG)/280     9% used
                   20+4(JTAG)/105     23% bonded
 
-   SLICE            360/2160         16% used
+   SLICE            262/2160         12% used
 
    GSR                1/1           100% used
 
 
-Number of Signals: 998
-Number of Connections: 1424
+Number of Signals: 686
+Number of Connections: 1046
 
 Pin Constraint Summary:
    20 out of 20 pins locked (100% locked).
 
 The following 1 signal is selected to use the primary clock routing resources:
-    clk_c (driver: clk, clk load #: 40)
+    clk_c (driver: clk, clk load #: 24)
 
     <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="clk_c" arg1="Primary" arg2="clk" arg3="C1" arg4="Primary"  />
 
-No signal is selected as secondary clock.
+The following 1 signal is selected to use the secondary clock routing resources:
+    clk_c_enable_34 (driver: SLICE_270, clk load #: 0, sr load #: 0, ce load #: 18)
 
 Signal rst_n_c is selected as Global Set/Reset.
 Starting Placer Phase 0.
-...........
+..........
 Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
 ..................
-Placer score = 103996.
+Placer score = 83480.
 Finished Placer Phase 1.  REAL time: 2 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  102537
+Placer score =  83316
 Finished Placer Phase 2.  REAL time: 2 secs 
 
 
@@ -363,10 +361,11 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 40
+  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 24
+  SECONDARY "clk_c_enable_34" from F1 on comp "SLICE_270" on site "R12C17C", clk load = 0, ce load = 18, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
-  SECONDARY: 0 out of 8 (0%)
+  SECONDARY: 1 out of 8 (12%)
 
 Edge Clocks:
   No edge clock selected.
@@ -392,7 +391,7 @@ I/O Bank Usage Summary:
 | 5        | 1 / 10 ( 10%)  | 2.5V       | -         |
 +----------+----------------+------------+-----------+
 
-Total placer CPU time: 2 secs 
+Total placer CPU time: 1 secs 
 
 Dumping design to file IIR_2_impl1.dir/5_1.ncd.
 
@@ -401,12 +400,12 @@ Dumping design to file IIR_2_impl1.dir/5_1.ncd.
 INFO - par: ASE feature is off due to non timing-driven settings.  
 -----------------------------------------------------------------
 
-0 connections routed; 1424 unrouted.
+0 connections routed; 1046 unrouted.
 Starting router resource preassignment
 
 Completed router resource preassignment. Real time: 3 secs 
 
-Start NBR router at 18:25:55 07/29/25
+Start NBR router at 20:54:46 07/29/25
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -421,28 +420,28 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 18:25:55 07/29/25
+Start NBR special constraint process at 20:54:46 07/29/25
 
-Start NBR section for initial routing at 18:25:55 07/29/25
+Start NBR section for initial routing at 20:54:46 07/29/25
 Level 4, iteration 1
-26(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
+24(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 18:25:55 07/29/25
+Start NBR section for normal routing at 20:54:46 07/29/25
 Level 4, iteration 1
-7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 Level 4, iteration 2
-4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for re-routing at 18:25:55 07/29/25
+Start NBR section for re-routing at 20:54:46 07/29/25
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for post-routing at 18:25:55 07/29/25
+Start NBR section for post-routing at 20:54:46 07/29/25
 
 End NBR router with 0 unrouted connection
 
@@ -457,10 +456,10 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
 
 
-Total CPU time 3 secs 
+Total CPU time 2 secs 
 Total REAL time: 3 secs 
 Completely routed.
-End of route.  1424 routed (100.00%); 0 unrouted.
+End of route.  1046 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -477,7 +476,7 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
 PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 3 secs 
+Total CPU  time to completion: 2 secs 
 Total REAL time to completion: 3 secs 
 
 par done!
@@ -515,7 +514,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
-Tue Jul 29 18:25:56 2025
+Tue Jul 29 20:54:47 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -542,14 +541,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 4096  Score: 56921146
-Cumulative negative slack: 56921146
+Timing errors: 4096  Score: 73773888
+Cumulative negative slack: 73773888
 
-Constraints cover 3345537 paths, 1 nets, and 1028 connections (72.19% coverage)
+Constraints cover 7335980 paths, 1 nets, and 925 connections (88.43% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
-Tue Jul 29 18:25:56 2025
+Tue Jul 29 20:54:47 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -578,7 +577,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 3345537 paths, 1 nets, and 1028 connections (72.19% coverage)
+Constraints cover 7335980 paths, 1 nets, and 925 connections (88.43% coverage)
 
 
 
@@ -586,15 +585,15 @@ Timing summary (Setup and Hold):
 ---------------
 
 Timing errors: 4096 (setup), 0 (hold)
-Score: 56921146 (setup), 0 (hold)
-Cumulative negative slack: 56921146 (56921146+0)
+Score: 73773888 (setup), 0 (hold)
+Cumulative negative slack: 73773888 (73773888+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 66 MB
+Peak Memory Usage: 64 MB
 
 
 tmcheck -par "IIR_2_impl1.par" 
@@ -687,9 +686,9 @@ Initialized UFM Pages:                     0 Page.
 =========
 Padding summary
 =========
-Padded 667264 bits for this design
+Padded 677888 bits for this design
 
 
-Total CPU Time: 2 secs 
+Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 276 MB
+Peak Memory Usage: 275 MB

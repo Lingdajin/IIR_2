@@ -10,19 +10,6 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
-            <ID>35001200</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>IIR</Dynamic>
-        </Message>
-        <Message>
-            <ID>35901208</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(55): </Dynamic>
-            <Dynamic>16</Dynamic>
-            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
-            <Navigation>55</Navigation>
-        </Message>
-        <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
             <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(75): </Dynamic>
@@ -58,14 +45,6 @@
             <Severity>Warning</Severity>
             <Dynamic>8</Dynamic>
             <Dynamic>x_d2</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(108): </Dynamic>
-            <Dynamic>x_d1_ret3_i24</Dynamic>
-            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
-            <Navigation>108</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

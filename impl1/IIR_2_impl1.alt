@@ -1,14 +1,14 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Tue Jul 29 18:25:59 2025 *
+NOTE DATE CREATED: Tue Jul 29 20:54:50 2025 *
 NOTE DESIGN NAME: IIR *
 NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
 NOTE PIN ASSIGNMENTS *
 NOTE PINS dac[4] : K14 : out *
 NOTE PINS dac[6] : K12 : out *
+NOTE PINS dac[3] : G14 : out *
 NOTE PINS dac[7] : J13 : out *
 NOTE PINS dac[5] : H12 : out *
-NOTE PINS dac[3] : G14 : out *
 NOTE PINS dac[2] : K13 : out *
 NOTE PINS dac[1] : G13 : out *
 NOTE PINS dac[0] : J12 : out *

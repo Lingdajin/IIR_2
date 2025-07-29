@@ -49,11 +49,11 @@ assign dac_clk = clk_1M_reg; // ADC和DAC使用同一时钟
 // b1 = -1.1430, b2 = 0.4128
 //
 // 转换为Q4.12定点数 (乘以 2^12 = 4096)
-localparam signed [31:0] A0 = 16'sd4421;     // 0.067455 * 4096
-localparam signed [31:0] A1 = 16'sd8841;    // 0.134911 * 4096
-localparam signed [31:0] A2 = 16'sd4421;    // 0.067455 * 4096
-localparam signed [31:0] B1 = -16'sd74906;  // -1.14298 * 4096
-localparam signed [31:0] B2 = 16'sd27053;   // 0.412802 * 4096
+localparam signed [15:0] A0 = 16'sd276;    // 0.067455 * 4096
+localparam signed [15:0] A1 = 16'sd553;    // 0.134911 * 4096
+localparam signed [15:0] A2 = 16'sd276;    // 0.067455 * 4096
+localparam signed [15:0] B1 = -16'sd4682;  // -1.14298 * 4096
+localparam signed [15:0] B2 = 16'sd1691;   // 0.412802 * 4096
 
 //----------------------------------------------------------------
 // 内部信号和寄存器
@@ -87,12 +87,12 @@ wire signed [8:0] x;
 // 输出y是y_full定点数的小数部分对齐并截断后的结果
 // 右移32位以匹配Q4.12格式，然后取高8位
 assign x = {1'b0,adc}; // 输入信号直接连接到adc输入
-assign y = {y_full >>> 16};
+assign y = {y_full >>> 12};
 
 assign dac = y[7:0]; // 输出信号直接连接到dac输出
 
 // 时序逻辑: 在时钟上升沿更新历史数据
-always @(posedge clk or negedge rst_n) begin
+always @(posedge clk_1M or negedge rst_n) begin
     if (!rst_n) begin
         // 复位
         x_d1 <= 8'd0;

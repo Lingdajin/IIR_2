@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jul 29 18:25:57 2025
+Tue Jul 29 20:54:48 2025
 
 
 Command: bitgen -g RamCfg:Reset -path D:/CodeField/Verilog/Diamond_design/IIR_2 -w -jedec -gui IIR_2_impl1.ncd IIR_2_impl1.prf 
@@ -86,9 +86,9 @@ Initialized UFM Pages:                     0 Page.
 =========
 Padding summary
 =========
-Padded 667264 bits for this design
+Padded 677888 bits for this design
 
 
-Total CPU Time: 2 secs 
+Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 276 MB
+Peak Memory Usage: 275 MB

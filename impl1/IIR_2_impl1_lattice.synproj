@@ -33,6 +33,7 @@
 -lpf 1
 -p "D:/CodeField/Verilog/Diamond_design/IIR_2"
 -ver "D:/CodeField/Verilog/Diamond_design/IIR_2/source/IIR.v"
+-top IIR
 
 
 -p "D:/Program/Diamond/diamond/3.13/ispfpga/xo2c00/data" "D:/CodeField/Verilog/Diamond_design/IIR_2/impl1" "D:/CodeField/Verilog/Diamond_design/IIR_2"
