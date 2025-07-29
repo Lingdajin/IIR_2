@@ -1,0 +1,1761 @@
+<top name = "IIR"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "clk"  type = "port" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "IIR">
+
+    <!--
+        Top Level Pins: 20
+    -->
+
+    <pins>
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "rst_n"  direction = "in"  />
+        <pitem  name = "adc[7]"  direction = "in"  />
+        <pitem  name = "adc[6]"  direction = "in"  />
+        <pitem  name = "adc[5]"  direction = "in"  />
+        <pitem  name = "adc[4]"  direction = "in"  />
+        <pitem  name = "adc[3]"  direction = "in"  />
+        <pitem  name = "adc[2]"  direction = "in"  />
+        <pitem  name = "adc[1]"  direction = "in"  />
+        <pitem  name = "adc[0]"  direction = "in"  />
+        <pitem  name = "dac[7]"  direction = "out"  />
+        <pitem  name = "dac[6]"  direction = "out"  />
+        <pitem  name = "dac[5]"  direction = "out"  />
+        <pitem  name = "dac[4]"  direction = "out"  />
+        <pitem  name = "dac[3]"  direction = "out"  />
+        <pitem  name = "dac[2]"  direction = "out"  />
+        <pitem  name = "dac[1]"  direction = "out"  />
+        <pitem  name = "dac[0]"  direction = "out"  />
+        <pitem  name = "adc_clk"  direction = "out"  />
+        <pitem  name = "dac_clk"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 20
+    -->
+
+    <instance  name = "rst_n_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "rst_n"  />
+        <nitem  name = "rst_n_N_42"  />
+        </nets>
+    </instance>
+
+    <instance  name = "clk_divide_counter_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clk_divide_counter[7]"  />
+        <nitem  name = "clk_divide_counter[6]"  />
+        <nitem  name = "clk_divide_counter[5]"  />
+        <nitem  name = "clk_divide_counter[4]"  />
+        <nitem  name = "clk_divide_counter[3]"  />
+        <nitem  name = "clk_divide_counter[2]"  />
+        <nitem  name = "clk_divide_counter[1]"  />
+        <nitem  name = "clk_divide_counter[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "clk_divide_counter_7__N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "add_7"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "clk_divide_counter[7]"  />
+        <nitem  name = "clk_divide_counter[6]"  />
+        <nitem  name = "clk_divide_counter[5]"  />
+        <nitem  name = "clk_divide_counter[4]"  />
+        <nitem  name = "clk_divide_counter[3]"  />
+        <nitem  name = "clk_divide_counter[2]"  />
+        <nitem  name = "clk_divide_counter[1]"  />
+        <nitem  name = "clk_divide_counter[0]"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "clk_divide_counter_7__N_43[7]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[6]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[5]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[4]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[3]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[2]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[1]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "clk_divide_counter_7__I_0_35"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clk_divide_counter_7__N_43[7]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[6]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[5]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[4]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[3]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[2]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[1]"  />
+        <nitem  name = "clk_divide_counter_7__N_43[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "clk_divide_counter_7__N_51"  />
+        <nitem  name = "clk_divide_counter_7__N_33[7]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[6]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[5]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[4]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[3]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[2]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[1]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "clk_divide_counter"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clk_divide_counter_7__N_33[7]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[6]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[5]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[4]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[3]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[2]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[1]"  />
+        <nitem  name = "clk_divide_counter_7__N_33[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "rst_n_N_42"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "clk_divide_counter[7]"  />
+        <nitem  name = "clk_divide_counter[6]"  />
+        <nitem  name = "clk_divide_counter[5]"  />
+        <nitem  name = "clk_divide_counter[4]"  />
+        <nitem  name = "clk_divide_counter[3]"  />
+        <nitem  name = "clk_divide_counter[2]"  />
+        <nitem  name = "clk_divide_counter[1]"  />
+        <nitem  name = "clk_divide_counter[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "x_d1"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "adc[7]"  />
+        <nitem  name = "adc[6]"  />
+        <nitem  name = "adc[5]"  />
+        <nitem  name = "adc[4]"  />
+        <nitem  name = "adc[3]"  />
+        <nitem  name = "adc[2]"  />
+        <nitem  name = "adc[1]"  />
+        <nitem  name = "adc[0]"  />
+        <nitem  name = "rst_n_N_42"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "x_d1[8]"  />
+        <nitem  name = "x_d1[7]"  />
+        <nitem  name = "x_d1[6]"  />
+        <nitem  name = "x_d1[5]"  />
+        <nitem  name = "x_d1[4]"  />
+        <nitem  name = "x_d1[3]"  />
+        <nitem  name = "x_d1[2]"  />
+        <nitem  name = "x_d1[1]"  />
+        <nitem  name = "x_d1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "adc_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "adc[7]"  />
+        <nitem  name = "adc[6]"  />
+        <nitem  name = "adc[5]"  />
+        <nitem  name = "adc[4]"  />
+        <nitem  name = "adc[3]"  />
+        <nitem  name = "adc[2]"  />
+        <nitem  name = "adc[1]"  />
+        <nitem  name = "adc[0]"  />
+        <nitem  name = "term_a0[31]"  />
+        <nitem  name = "term_a0[21]"  />
+        <nitem  name = "term_a0[20]"  />
+        <nitem  name = "term_a0[19]"  />
+        <nitem  name = "term_a0[18]"  />
+        <nitem  name = "term_a0[17]"  />
+        <nitem  name = "term_a0[16]"  />
+        <nitem  name = "term_a0[15]"  />
+        <nitem  name = "term_a0[14]"  />
+        <nitem  name = "term_a0[13]"  />
+        <nitem  name = "term_a0[12]"  />
+        <nitem  name = "term_a0[11]"  />
+        <nitem  name = "term_a0[10]"  />
+        <nitem  name = "term_a0[9]"  />
+        <nitem  name = "term_a0[8]"  />
+        <nitem  name = "term_a0[7]"  />
+        <nitem  name = "term_a0[6]"  />
+        <nitem  name = "term_a0[5]"  />
+        <nitem  name = "term_a0[4]"  />
+        <nitem  name = "term_a0[3]"  />
+        <nitem  name = "term_a0[2]"  />
+        <nitem  name = "term_a0[1]"  />
+        <nitem  name = "term_a0[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "x_d1_8__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "x_d1[8]"  />
+        <nitem  name = "x_d1[7]"  />
+        <nitem  name = "x_d1[6]"  />
+        <nitem  name = "x_d1[5]"  />
+        <nitem  name = "x_d1[4]"  />
+        <nitem  name = "x_d1[3]"  />
+        <nitem  name = "x_d1[2]"  />
+        <nitem  name = "x_d1[1]"  />
+        <nitem  name = "x_d1[0]"  />
+        <nitem  name = "term_a1[31]"  />
+        <nitem  name = "term_a1[22]"  />
+        <nitem  name = "term_a1[21]"  />
+        <nitem  name = "term_a1[20]"  />
+        <nitem  name = "term_a1[19]"  />
+        <nitem  name = "term_a1[18]"  />
+        <nitem  name = "term_a1[17]"  />
+        <nitem  name = "term_a1[16]"  />
+        <nitem  name = "term_a1[15]"  />
+        <nitem  name = "term_a1[14]"  />
+        <nitem  name = "term_a1[13]"  />
+        <nitem  name = "term_a1[12]"  />
+        <nitem  name = "term_a1[11]"  />
+        <nitem  name = "term_a1[10]"  />
+        <nitem  name = "term_a1[9]"  />
+        <nitem  name = "term_a1[8]"  />
+        <nitem  name = "term_a1[7]"  />
+        <nitem  name = "term_a1[6]"  />
+        <nitem  name = "term_a1[5]"  />
+        <nitem  name = "term_a1[4]"  />
+        <nitem  name = "term_a1[3]"  />
+        <nitem  name = "term_a1[2]"  />
+        <nitem  name = "term_a1[1]"  />
+        <nitem  name = "term_a1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "x_d2_8__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "x_d2[8]"  />
+        <nitem  name = "x_d2[7]"  />
+        <nitem  name = "x_d2[6]"  />
+        <nitem  name = "x_d2[5]"  />
+        <nitem  name = "x_d2[4]"  />
+        <nitem  name = "x_d2[3]"  />
+        <nitem  name = "x_d2[2]"  />
+        <nitem  name = "x_d2[1]"  />
+        <nitem  name = "x_d2[0]"  />
+        <nitem  name = "term_a2[31]"  />
+        <nitem  name = "term_a2[21]"  />
+        <nitem  name = "term_a2[20]"  />
+        <nitem  name = "term_a2[19]"  />
+        <nitem  name = "term_a2[18]"  />
+        <nitem  name = "term_a2[17]"  />
+        <nitem  name = "term_a2[16]"  />
+        <nitem  name = "term_a2[15]"  />
+        <nitem  name = "term_a2[14]"  />
+        <nitem  name = "term_a2[13]"  />
+        <nitem  name = "term_a2[12]"  />
+        <nitem  name = "term_a2[11]"  />
+        <nitem  name = "term_a2[10]"  />
+        <nitem  name = "term_a2[9]"  />
+        <nitem  name = "term_a2[8]"  />
+        <nitem  name = "term_a2[7]"  />
+        <nitem  name = "term_a2[6]"  />
+        <nitem  name = "term_a2[5]"  />
+        <nitem  name = "term_a2[4]"  />
+        <nitem  name = "term_a2[3]"  />
+        <nitem  name = "term_a2[2]"  />
+        <nitem  name = "term_a2[1]"  />
+        <nitem  name = "term_a2[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "y_d1_8__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwr"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "y_d1[8]"  />
+        <nitem  name = "y_d1[7]"  />
+        <nitem  name = "y_d1[6]"  />
+        <nitem  name = "y_d1[5]"  />
+        <nitem  name = "y_d1[4]"  />
+        <nitem  name = "y_d1[3]"  />
+        <nitem  name = "y_d1[2]"  />
+        <nitem  name = "y_d1[1]"  />
+        <nitem  name = "y_d1[0]"  />
+        <nitem  name = "term_b1[31]"  />
+        <nitem  name = "term_b1[22]"  />
+        <nitem  name = "term_b1[21]"  />
+        <nitem  name = "term_b1[20]"  />
+        <nitem  name = "term_b1[19]"  />
+        <nitem  name = "term_b1[18]"  />
+        <nitem  name = "term_b1[17]"  />
+        <nitem  name = "term_b1[16]"  />
+        <nitem  name = "term_b1[15]"  />
+        <nitem  name = "term_b1[14]"  />
+        <nitem  name = "term_b1[13]"  />
+        <nitem  name = "term_b1[12]"  />
+        <nitem  name = "term_b1[11]"  />
+        <nitem  name = "term_b1[10]"  />
+        <nitem  name = "term_b1[9]"  />
+        <nitem  name = "term_b1[8]"  />
+        <nitem  name = "term_b1[7]"  />
+        <nitem  name = "term_b1[6]"  />
+        <nitem  name = "term_b1[5]"  />
+        <nitem  name = "term_b1[4]"  />
+        <nitem  name = "term_b1[3]"  />
+        <nitem  name = "term_b1[2]"  />
+        <nitem  name = "term_b1[1]"  />
+        <nitem  name = "term_b1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "y_d2_8__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "y_d2[8]"  />
+        <nitem  name = "y_d2[7]"  />
+        <nitem  name = "y_d2[6]"  />
+        <nitem  name = "y_d2[5]"  />
+        <nitem  name = "y_d2[4]"  />
+        <nitem  name = "y_d2[3]"  />
+        <nitem  name = "y_d2[2]"  />
+        <nitem  name = "y_d2[1]"  />
+        <nitem  name = "y_d2[0]"  />
+        <nitem  name = "term_b2[31]"  />
+        <nitem  name = "term_b2[23]"  />
+        <nitem  name = "term_b2[22]"  />
+        <nitem  name = "term_b2[21]"  />
+        <nitem  name = "term_b2[20]"  />
+        <nitem  name = "term_b2[19]"  />
+        <nitem  name = "term_b2[18]"  />
+        <nitem  name = "term_b2[17]"  />
+        <nitem  name = "term_b2[16]"  />
+        <nitem  name = "term_b2[15]"  />
+        <nitem  name = "term_b2[14]"  />
+        <nitem  name = "term_b2[13]"  />
+        <nitem  name = "term_b2[12]"  />
+        <nitem  name = "term_b2[11]"  />
+        <nitem  name = "term_b2[10]"  />
+        <nitem  name = "term_b2[9]"  />
+        <nitem  name = "term_b2[8]"  />
+        <nitem  name = "term_b2[7]"  />
+        <nitem  name = "term_b2[6]"  />
+        <nitem  name = "term_b2[5]"  />
+        <nitem  name = "term_b2[4]"  />
+        <nitem  name = "term_b2[3]"  />
+        <nitem  name = "term_b2[2]"  />
+        <nitem  name = "term_b2[1]"  />
+        <nitem  name = "term_b2[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "add_17"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "term_a0[31]"  />
+        <nitem  name = "term_a0[21]"  />
+        <nitem  name = "term_a0[20]"  />
+        <nitem  name = "term_a0[19]"  />
+        <nitem  name = "term_a0[18]"  />
+        <nitem  name = "term_a0[17]"  />
+        <nitem  name = "term_a0[16]"  />
+        <nitem  name = "term_a0[15]"  />
+        <nitem  name = "term_a0[14]"  />
+        <nitem  name = "term_a0[13]"  />
+        <nitem  name = "term_a0[12]"  />
+        <nitem  name = "term_a0[11]"  />
+        <nitem  name = "term_a0[10]"  />
+        <nitem  name = "term_a0[9]"  />
+        <nitem  name = "term_a0[8]"  />
+        <nitem  name = "term_a0[7]"  />
+        <nitem  name = "term_a0[6]"  />
+        <nitem  name = "term_a0[5]"  />
+        <nitem  name = "term_a0[4]"  />
+        <nitem  name = "term_a0[3]"  />
+        <nitem  name = "term_a0[2]"  />
+        <nitem  name = "term_a0[1]"  />
+        <nitem  name = "term_a0[0]"  />
+        <nitem  name = "term_a1[31]"  />
+        <nitem  name = "term_a1[22]"  />
+        <nitem  name = "term_a1[21]"  />
+        <nitem  name = "term_a1[20]"  />
+        <nitem  name = "term_a1[19]"  />
+        <nitem  name = "term_a1[18]"  />
+        <nitem  name = "term_a1[17]"  />
+        <nitem  name = "term_a1[16]"  />
+        <nitem  name = "term_a1[15]"  />
+        <nitem  name = "term_a1[14]"  />
+        <nitem  name = "term_a1[13]"  />
+        <nitem  name = "term_a1[12]"  />
+        <nitem  name = "term_a1[11]"  />
+        <nitem  name = "term_a1[10]"  />
+        <nitem  name = "term_a1[9]"  />
+        <nitem  name = "term_a1[8]"  />
+        <nitem  name = "term_a1[7]"  />
+        <nitem  name = "term_a1[6]"  />
+        <nitem  name = "term_a1[5]"  />
+        <nitem  name = "term_a1[4]"  />
+        <nitem  name = "term_a1[3]"  />
+        <nitem  name = "term_a1[2]"  />
+        <nitem  name = "term_a1[1]"  />
+        <nitem  name = "term_a1[0]"  />
+        <nitem  name = "n162"  />
+        <nitem  name = "n163"  />
+        <nitem  name = "n164"  />
+        <nitem  name = "n165"  />
+        <nitem  name = "n166"  />
+        <nitem  name = "n167"  />
+        <nitem  name = "n168"  />
+        <nitem  name = "n169"  />
+        <nitem  name = "n170"  />
+        <nitem  name = "n171"  />
+        <nitem  name = "n172"  />
+        <nitem  name = "n173"  />
+        <nitem  name = "n174"  />
+        <nitem  name = "n175"  />
+        <nitem  name = "n176"  />
+        <nitem  name = "n177"  />
+        <nitem  name = "n178"  />
+        <nitem  name = "n179"  />
+        <nitem  name = "n180"  />
+        <nitem  name = "n181"  />
+        <nitem  name = "n182"  />
+        <nitem  name = "n183"  />
+        <nitem  name = "n184"  />
+        <nitem  name = "n185"  />
+        <nitem  name = "n186"  />
+        <nitem  name = "n187"  />
+        <nitem  name = "n188"  />
+        <nitem  name = "n189"  />
+        <nitem  name = "n190"  />
+        <nitem  name = "n191"  />
+        <nitem  name = "n192"  />
+        <nitem  name = "n193"  />
+        </nets>
+    </instance>
+
+    <instance  name = "add_18"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "gnd"  />
+        <nitem  name = "n162"  />
+        <nitem  name = "n163"  />
+        <nitem  name = "n164"  />
+        <nitem  name = "n165"  />
+        <nitem  name = "n166"  />
+        <nitem  name = "n167"  />
+        <nitem  name = "n168"  />
+        <nitem  name = "n169"  />
+        <nitem  name = "n170"  />
+        <nitem  name = "n171"  />
+        <nitem  name = "n172"  />
+        <nitem  name = "n173"  />
+        <nitem  name = "n174"  />
+        <nitem  name = "n175"  />
+        <nitem  name = "n176"  />
+        <nitem  name = "n177"  />
+        <nitem  name = "n178"  />
+        <nitem  name = "n179"  />
+        <nitem  name = "n180"  />
+        <nitem  name = "n181"  />
+        <nitem  name = "n182"  />
+        <nitem  name = "n183"  />
+        <nitem  name = "n184"  />
+        <nitem  name = "n185"  />
+        <nitem  name = "n186"  />
+        <nitem  name = "n187"  />
+        <nitem  name = "n188"  />
+        <nitem  name = "n189"  />
+        <nitem  name = "n190"  />
+        <nitem  name = "n191"  />
+        <nitem  name = "n192"  />
+        <nitem  name = "n193"  />
+        <nitem  name = "term_a2[31]"  />
+        <nitem  name = "term_a2[21]"  />
+        <nitem  name = "term_a2[20]"  />
+        <nitem  name = "term_a2[19]"  />
+        <nitem  name = "term_a2[18]"  />
+        <nitem  name = "term_a2[17]"  />
+        <nitem  name = "term_a2[16]"  />
+        <nitem  name = "term_a2[15]"  />
+        <nitem  name = "term_a2[14]"  />
+        <nitem  name = "term_a2[13]"  />
+        <nitem  name = "term_a2[12]"  />
+        <nitem  name = "term_a2[11]"  />
+        <nitem  name = "term_a2[10]"  />
+        <nitem  name = "term_a2[9]"  />
+        <nitem  name = "term_a2[8]"  />
+        <nitem  name = "term_a2[7]"  />
+        <nitem  name = "term_a2[6]"  />
+        <nitem  name = "term_a2[5]"  />
+        <nitem  name = "term_a2[4]"  />
+        <nitem  name = "term_a2[3]"  />
+        <nitem  name = "term_a2[2]"  />
+        <nitem  name = "term_a2[1]"  />
+        <nitem  name = "term_a2[0]"  />
+        <nitem  name = "dac_7__N_52[31]"  />
+        <nitem  name = "dac_7__N_52[30]"  />
+        <nitem  name = "dac_7__N_52[29]"  />
+        <nitem  name = "dac_7__N_52[28]"  />
+        <nitem  name = "dac_7__N_52[27]"  />
+        <nitem  name = "dac_7__N_52[26]"  />
+        <nitem  name = "dac_7__N_52[25]"  />
+        <nitem  name = "dac_7__N_52[24]"  />
+        <nitem  name = "dac_7__N_52[23]"  />
+        <nitem  name = "dac_7__N_52[22]"  />
+        <nitem  name = "dac_7__N_52[21]"  />
+        <nitem  name = "dac_7__N_52[20]"  />
+        <nitem  name = "dac_7__N_52[19]"  />
+        <nitem  name = "dac_7__N_52[18]"  />
+        <nitem  name = "dac_7__N_52[17]"  />
+        <nitem  name = "dac_7__N_52[16]"  />
+        <nitem  name = "dac_7__N_52[15]"  />
+        <nitem  name = "dac_7__N_52[14]"  />
+        <nitem  name = "dac_7__N_52[13]"  />
+        <nitem  name = "dac_7__N_52[12]"  />
+        <nitem  name = "dac_7__N_52[11]"  />
+        <nitem  name = "dac_7__N_52[10]"  />
+        <nitem  name = "dac_7__N_52[9]"  />
+        <nitem  name = "dac_7__N_52[8]"  />
+        <nitem  name = "dac_7__N_52[7]"  />
+        <nitem  name = "dac_7__N_52[6]"  />
+        <nitem  name = "dac_7__N_52[5]"  />
+        <nitem  name = "dac_7__N_52[4]"  />
+        <nitem  name = "dac_7__N_52[3]"  />
+        <nitem  name = "dac_7__N_52[2]"  />
+        <nitem  name = "dac_7__N_52[1]"  />
+        <nitem  name = "dac_7__N_52[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dac_7__I_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[31]"  direction = "out"  />
+        <pitem  name = "o[30]"  direction = "out"  />
+        <pitem  name = "o[29]"  direction = "out"  />
+        <pitem  name = "o[28]"  direction = "out"  />
+        <pitem  name = "o[27]"  direction = "out"  />
+        <pitem  name = "o[26]"  direction = "out"  />
+        <pitem  name = "o[25]"  direction = "out"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dac_7__N_52[31]"  />
+        <nitem  name = "dac_7__N_52[30]"  />
+        <nitem  name = "dac_7__N_52[29]"  />
+        <nitem  name = "dac_7__N_52[28]"  />
+        <nitem  name = "dac_7__N_52[27]"  />
+        <nitem  name = "dac_7__N_52[26]"  />
+        <nitem  name = "dac_7__N_52[25]"  />
+        <nitem  name = "dac_7__N_52[24]"  />
+        <nitem  name = "dac_7__N_52[23]"  />
+        <nitem  name = "dac_7__N_52[22]"  />
+        <nitem  name = "dac_7__N_52[21]"  />
+        <nitem  name = "dac_7__N_52[20]"  />
+        <nitem  name = "dac_7__N_52[19]"  />
+        <nitem  name = "dac_7__N_52[18]"  />
+        <nitem  name = "dac_7__N_52[17]"  />
+        <nitem  name = "dac_7__N_52[16]"  />
+        <nitem  name = "dac_7__N_52[15]"  />
+        <nitem  name = "dac_7__N_52[14]"  />
+        <nitem  name = "dac_7__N_52[13]"  />
+        <nitem  name = "dac_7__N_52[12]"  />
+        <nitem  name = "dac_7__N_52[11]"  />
+        <nitem  name = "dac_7__N_52[10]"  />
+        <nitem  name = "dac_7__N_52[9]"  />
+        <nitem  name = "dac_7__N_52[8]"  />
+        <nitem  name = "dac_7__N_52[7]"  />
+        <nitem  name = "dac_7__N_52[6]"  />
+        <nitem  name = "dac_7__N_52[5]"  />
+        <nitem  name = "dac_7__N_52[4]"  />
+        <nitem  name = "dac_7__N_52[3]"  />
+        <nitem  name = "dac_7__N_52[2]"  />
+        <nitem  name = "dac_7__N_52[1]"  />
+        <nitem  name = "dac_7__N_52[0]"  />
+        <nitem  name = "term_b1[31]"  />
+        <nitem  name = "term_b1[22]"  />
+        <nitem  name = "term_b1[21]"  />
+        <nitem  name = "term_b1[20]"  />
+        <nitem  name = "term_b1[19]"  />
+        <nitem  name = "term_b1[18]"  />
+        <nitem  name = "term_b1[17]"  />
+        <nitem  name = "term_b1[16]"  />
+        <nitem  name = "term_b1[15]"  />
+        <nitem  name = "term_b1[14]"  />
+        <nitem  name = "term_b1[13]"  />
+        <nitem  name = "term_b1[12]"  />
+        <nitem  name = "term_b1[11]"  />
+        <nitem  name = "term_b1[10]"  />
+        <nitem  name = "term_b1[9]"  />
+        <nitem  name = "term_b1[8]"  />
+        <nitem  name = "term_b1[7]"  />
+        <nitem  name = "term_b1[6]"  />
+        <nitem  name = "term_b1[5]"  />
+        <nitem  name = "term_b1[4]"  />
+        <nitem  name = "term_b1[3]"  />
+        <nitem  name = "term_b1[2]"  />
+        <nitem  name = "term_b1[1]"  />
+        <nitem  name = "term_b1[0]"  />
+        <nitem  name = "dac_7__N_1[31]"  />
+        <nitem  name = "dac_7__N_1[30]"  />
+        <nitem  name = "dac_7__N_1[29]"  />
+        <nitem  name = "dac_7__N_1[28]"  />
+        <nitem  name = "dac_7__N_1[27]"  />
+        <nitem  name = "dac_7__N_1[26]"  />
+        <nitem  name = "dac_7__N_1[25]"  />
+        <nitem  name = "dac_7__N_1[24]"  />
+        <nitem  name = "dac_7__N_1[23]"  />
+        <nitem  name = "dac_7__N_1[22]"  />
+        <nitem  name = "dac_7__N_1[21]"  />
+        <nitem  name = "dac_7__N_1[20]"  />
+        <nitem  name = "dac_7__N_1[19]"  />
+        <nitem  name = "dac_7__N_1[18]"  />
+        <nitem  name = "dac_7__N_1[17]"  />
+        <nitem  name = "dac_7__N_1[16]"  />
+        <nitem  name = "dac_7__N_1[15]"  />
+        <nitem  name = "dac_7__N_1[14]"  />
+        <nitem  name = "dac_7__N_1[13]"  />
+        <nitem  name = "dac_7__N_1[12]"  />
+        <nitem  name = "dac_7__N_1[11]"  />
+        <nitem  name = "dac_7__N_1[10]"  />
+        <nitem  name = "dac_7__N_1[9]"  />
+        <nitem  name = "dac_7__N_1[8]"  />
+        <nitem  name = "dac_7__N_1[7]"  />
+        <nitem  name = "dac_7__N_1[6]"  />
+        <nitem  name = "dac_7__N_1[5]"  />
+        <nitem  name = "dac_7__N_1[4]"  />
+        <nitem  name = "dac_7__N_1[3]"  />
+        <nitem  name = "dac_7__N_1[2]"  />
+        <nitem  name = "dac_7__N_1[1]"  />
+        <nitem  name = "dac_7__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dac_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a[31]"  direction = "in"  />
+        <pitem  name = "a[30]"  direction = "in"  />
+        <pitem  name = "a[29]"  direction = "in"  />
+        <pitem  name = "a[28]"  direction = "in"  />
+        <pitem  name = "a[27]"  direction = "in"  />
+        <pitem  name = "a[26]"  direction = "in"  />
+        <pitem  name = "a[25]"  direction = "in"  />
+        <pitem  name = "a[24]"  direction = "in"  />
+        <pitem  name = "a[23]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[31]"  direction = "in"  />
+        <pitem  name = "b[30]"  direction = "in"  />
+        <pitem  name = "b[29]"  direction = "in"  />
+        <pitem  name = "b[28]"  direction = "in"  />
+        <pitem  name = "b[27]"  direction = "in"  />
+        <pitem  name = "b[26]"  direction = "in"  />
+        <pitem  name = "b[25]"  direction = "in"  />
+        <pitem  name = "b[24]"  direction = "in"  />
+        <pitem  name = "b[23]"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o[24]"  direction = "out"  />
+        <pitem  name = "o[23]"  direction = "out"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dac_7__N_1[31]"  />
+        <nitem  name = "dac_7__N_1[30]"  />
+        <nitem  name = "dac_7__N_1[29]"  />
+        <nitem  name = "dac_7__N_1[28]"  />
+        <nitem  name = "dac_7__N_1[27]"  />
+        <nitem  name = "dac_7__N_1[26]"  />
+        <nitem  name = "dac_7__N_1[25]"  />
+        <nitem  name = "dac_7__N_1[24]"  />
+        <nitem  name = "dac_7__N_1[23]"  />
+        <nitem  name = "dac_7__N_1[22]"  />
+        <nitem  name = "dac_7__N_1[21]"  />
+        <nitem  name = "dac_7__N_1[20]"  />
+        <nitem  name = "dac_7__N_1[19]"  />
+        <nitem  name = "dac_7__N_1[18]"  />
+        <nitem  name = "dac_7__N_1[17]"  />
+        <nitem  name = "dac_7__N_1[16]"  />
+        <nitem  name = "dac_7__N_1[15]"  />
+        <nitem  name = "dac_7__N_1[14]"  />
+        <nitem  name = "dac_7__N_1[13]"  />
+        <nitem  name = "dac_7__N_1[12]"  />
+        <nitem  name = "dac_7__N_1[11]"  />
+        <nitem  name = "dac_7__N_1[10]"  />
+        <nitem  name = "dac_7__N_1[9]"  />
+        <nitem  name = "dac_7__N_1[8]"  />
+        <nitem  name = "dac_7__N_1[7]"  />
+        <nitem  name = "dac_7__N_1[6]"  />
+        <nitem  name = "dac_7__N_1[5]"  />
+        <nitem  name = "dac_7__N_1[4]"  />
+        <nitem  name = "dac_7__N_1[3]"  />
+        <nitem  name = "dac_7__N_1[2]"  />
+        <nitem  name = "dac_7__N_1[1]"  />
+        <nitem  name = "dac_7__N_1[0]"  />
+        <nitem  name = "term_b2[31]"  />
+        <nitem  name = "term_b2[23]"  />
+        <nitem  name = "term_b2[22]"  />
+        <nitem  name = "term_b2[21]"  />
+        <nitem  name = "term_b2[20]"  />
+        <nitem  name = "term_b2[19]"  />
+        <nitem  name = "term_b2[18]"  />
+        <nitem  name = "term_b2[17]"  />
+        <nitem  name = "term_b2[16]"  />
+        <nitem  name = "term_b2[15]"  />
+        <nitem  name = "term_b2[14]"  />
+        <nitem  name = "term_b2[13]"  />
+        <nitem  name = "term_b2[12]"  />
+        <nitem  name = "term_b2[11]"  />
+        <nitem  name = "term_b2[10]"  />
+        <nitem  name = "term_b2[9]"  />
+        <nitem  name = "term_b2[8]"  />
+        <nitem  name = "term_b2[7]"  />
+        <nitem  name = "term_b2[6]"  />
+        <nitem  name = "term_b2[5]"  />
+        <nitem  name = "term_b2[4]"  />
+        <nitem  name = "term_b2[3]"  />
+        <nitem  name = "term_b2[2]"  />
+        <nitem  name = "term_b2[1]"  />
+        <nitem  name = "term_b2[0]"  />
+        <nitem  name = "y_full[24]"  />
+        <nitem  name = "dac[7]"  />
+        <nitem  name = "dac[6]"  />
+        <nitem  name = "dac[5]"  />
+        <nitem  name = "dac[4]"  />
+        <nitem  name = "dac[3]"  />
+        <nitem  name = "dac[2]"  />
+        <nitem  name = "dac[1]"  />
+        <nitem  name = "dac[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "adc_clk_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "adc_clk"  />
+        <nitem  name = "clk_divide_counter_7__N_51"  />
+        <nitem  name = "adc_clk_N_84"  />
+        </nets>
+    </instance>
+
+    <instance  name = "x_d2"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "x_d1[8]"  />
+        <nitem  name = "x_d1[7]"  />
+        <nitem  name = "x_d1[6]"  />
+        <nitem  name = "x_d1[5]"  />
+        <nitem  name = "x_d1[4]"  />
+        <nitem  name = "x_d1[3]"  />
+        <nitem  name = "x_d1[2]"  />
+        <nitem  name = "x_d1[1]"  />
+        <nitem  name = "x_d1[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "rst_n_N_42"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "x_d2[8]"  />
+        <nitem  name = "x_d2[7]"  />
+        <nitem  name = "x_d2[6]"  />
+        <nitem  name = "x_d2[5]"  />
+        <nitem  name = "x_d2[4]"  />
+        <nitem  name = "x_d2[3]"  />
+        <nitem  name = "x_d2[2]"  />
+        <nitem  name = "x_d2[1]"  />
+        <nitem  name = "x_d2[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "y_d1"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "y_full[24]"  />
+        <nitem  name = "dac[7]"  />
+        <nitem  name = "dac[6]"  />
+        <nitem  name = "dac[5]"  />
+        <nitem  name = "dac[4]"  />
+        <nitem  name = "dac[3]"  />
+        <nitem  name = "dac[2]"  />
+        <nitem  name = "dac[1]"  />
+        <nitem  name = "dac[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "rst_n_N_42"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "y_d1[8]"  />
+        <nitem  name = "y_d1[7]"  />
+        <nitem  name = "y_d1[6]"  />
+        <nitem  name = "y_d1[5]"  />
+        <nitem  name = "y_d1[4]"  />
+        <nitem  name = "y_d1[3]"  />
+        <nitem  name = "y_d1[2]"  />
+        <nitem  name = "y_d1[1]"  />
+        <nitem  name = "y_d1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "y_d2"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "y_d1[8]"  />
+        <nitem  name = "y_d1[7]"  />
+        <nitem  name = "y_d1[6]"  />
+        <nitem  name = "y_d1[5]"  />
+        <nitem  name = "y_d1[4]"  />
+        <nitem  name = "y_d1[3]"  />
+        <nitem  name = "y_d1[2]"  />
+        <nitem  name = "y_d1[1]"  />
+        <nitem  name = "y_d1[0]"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "rst_n_N_42"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "y_d2[8]"  />
+        <nitem  name = "y_d2[7]"  />
+        <nitem  name = "y_d2[6]"  />
+        <nitem  name = "y_d2[5]"  />
+        <nitem  name = "y_d2[4]"  />
+        <nitem  name = "y_d2[3]"  />
+        <nitem  name = "y_d2[2]"  />
+        <nitem  name = "y_d2[1]"  />
+        <nitem  name = "y_d2[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "clk_1M_reg_28"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "adc_clk_N_84"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "gnd"  />
+        <nitem  name = "rst_n_N_42"  />
+        <nitem  name = "adc_clk"  />
+        </nets>
+    </instance>
+
+    <!--
+        MULT instances in netlist: 5
+    -->
+
+    <mults>
+        <mult  name = "adc_7__I_0"  />
+        <mult  name = "x_d1_8__I_0"  />
+        <mult  name = "x_d2_8__I_0"  />
+        <mult  name = "y_d1_8__I_0"  />
+        <mult  name = "y_d2_8__I_0"  />
+    </mults>
+
+    <!--
+        REG instances in netlist: 6
+    -->
+
+    <regs>
+        <reg  name = "clk_divide_counter"  />
+        <reg  name = "x_d1"  />
+        <reg  name = "x_d2"  />
+        <reg  name = "y_d1"  />
+        <reg  name = "y_d2"  />
+        <reg  name = "clk_1M_reg_28"  />
+    </regs>
+
+    <!--
+        Views in design "IIR": 0
+    -->
+
+    <views>
+    </views>
+
+</unit>
+
+</library>
+
+</top>

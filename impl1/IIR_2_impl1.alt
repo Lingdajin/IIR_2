@@ -1,0 +1,28 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Jul 29 18:25:59 2025 *
+NOTE DESIGN NAME: IIR *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS dac[4] : K14 : out *
+NOTE PINS dac[6] : K12 : out *
+NOTE PINS dac[7] : J13 : out *
+NOTE PINS dac[5] : H12 : out *
+NOTE PINS dac[3] : G14 : out *
+NOTE PINS dac[2] : K13 : out *
+NOTE PINS dac[1] : G13 : out *
+NOTE PINS dac[0] : J12 : out *
+NOTE PINS adc_clk : K3 : out *
+NOTE PINS dac_clk : J14 : out *
+NOTE PINS clk : C1 : in *
+NOTE PINS rst_n : N14 : in *
+NOTE PINS adc[7] : K2 : in *
+NOTE PINS adc[6] : L3 : in *
+NOTE PINS adc[5] : J3 : in *
+NOTE PINS adc[4] : N5 : in *
+NOTE PINS adc[3] : J2 : in *
+NOTE PINS adc[2] : P6 : in *
+NOTE PINS adc[1] : H3 : in *
+NOTE PINS adc[0] : N6 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

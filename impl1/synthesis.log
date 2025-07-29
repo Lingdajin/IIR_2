@@ -1,0 +1,170 @@
+synthesis:  version Diamond (64-bit) 3.13.0.56.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Jul 29 18:25:48 2025
+
+
+Command Line:  synthesis -f IIR_2_impl1_lattice.synproj -gui 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+The -top option is not used.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p D:/CodeField/Verilog/Diamond_design/IIR_2 (searchpath added)
+-p D:/Program/Diamond/diamond/3.13/ispfpga/xo2c00/data (searchpath added)
+-p D:/CodeField/Verilog/Diamond_design/IIR_2/impl1 (searchpath added)
+-p D:/CodeField/Verilog/Diamond_design/IIR_2 (searchpath added)
+Verilog design file = D:/CodeField/Verilog/Diamond_design/IIR_2/source/IIR.v
+NGD file = IIR_2_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+WARNING - synthesis: Setting IIR as the top-level module. To specify the top-level module explicitly, use the -top option.
+Technology check ok...
+
+Analyzing Verilog file D:/Program/Diamond/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file d:/codefield/verilog/diamond_design/iir_2/source/iir.v. VERI-1482
+WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(55): literal value truncated to fit in 16 bits. VERI-1208
+WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(75): identifier x is used before its declaration. VERI-1875
+Analyzing Verilog file D:/Program/Diamond/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Top module name (Verilog): IIR
+INFO - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(8): compiling module IIR. VERI-1018
+WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(90): expression size 32 truncated to fit in target size 9. VERI-1209
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: D:/Program/Diamond/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = IIR.
+WARNING - synthesis: Bit 8 of Register x_d1 is stuck at Zero
+WARNING - synthesis: Bit 8 of Register x_d2 is stuck at Zero
+
+
+
+
+The number of registers created due to operator pipelining is 30.
+
+WARNING - synthesis: d:/codefield/verilog/diamond_design/iir_2/source/iir.v(108): Register x_d1_ret3_i24 is stuck at Zero. VDB-5013
+GSR instance connected to net rst_n_c.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in IIR_drc.log.
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'D:/Program/Diamond/diamond/3.13/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file IIR_2_impl1.ngd.
+
+################### Begin Area Report (IIR)######################
+Number of register bits => 74 of 4635 (1 % )
+CCU2D => 341
+FD1S3AX => 66
+FD1S3IX => 8
+GSR => 1
+IB => 10
+LUT4 => 36
+OB => 10
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 74
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : y_d2_8, loads : 24
+  Net : y_d2_7, loads : 22
+  Net : y_d2_6, loads : 22
+  Net : y_d2_5, loads : 22
+  Net : y_d2_4, loads : 22
+  Net : y_d2_3, loads : 22
+  Net : y_d2_2, loads : 22
+  Net : y_d2_1, loads : 21
+  Net : term_b1_1, loads : 20
+  Net : x_d1_c_5, loads : 18
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   49.643 MHz|    21 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 77.371  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.969  secs
+--------------------------------------------------------------

@@ -1,0 +1,351 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Jul 29 18:25:49 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     IIR
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 15.144ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             y_d1_i8  (from clk_c +)
+   Destination:    FD1S3AX    D              y_d1_i7  (to clk_c +)
+
+   Delay:                  19.984ns  (61.9% logic, 38.1% route), 21 logic levels.
+
+ Constraint Details:
+
+     19.984ns data_path y_d1_i8 to y_d1_i7 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 15.144ns
+
+ Path Details: y_d1_i8 to y_d1_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              y_d1_i8 (from clk_c)
+Route        24   e 1.896                                  y_d2[8]
+LUT4        ---     0.493              A to Z              i263_2_lut
+Route         1   e 0.941                                  n115
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_131_2
+Route         1   e 0.020                                  n1853
+FCI_TO_F    ---     0.598            CIN to S[2]           add_131_4
+Route         1   e 0.020                                  n204
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_130_4
+Route         1   e 0.020                                  n1847
+FCI_TO_F    ---     0.598            CIN to S[2]           add_130_6
+Route         1   e 0.020                                  n293
+A1_TO_F     ---     0.493           A[2] to S[2]           add_129_6
+Route         1   e 0.020                                  n290_adj_111
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_128_6
+Route         1   e 0.020                                  n1834
+FCI_TO_F    ---     0.598            CIN to S[2]           add_128_8
+Route         1   e 0.020                                  n379_adj_118
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_127_8
+Route         1   e 0.020                                  n1828
+FCI_TO_F    ---     0.598            CIN to S[2]           add_127_10
+Route         1   e 0.020                                  n468_adj_125
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_126_10
+Route         1   e 0.020                                  n1822
+FCI_TO_F    ---     0.598            CIN to S[2]           add_126_12
+Route         1   e 0.020                                  n557_adj_132
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_125_12
+Route         1   e 0.020                                  n1809
+FCI_TO_F    ---     0.598            CIN to S[2]           add_125_14
+Route         2   e 1.486                                  n647
+A1_TO_FCO   ---     0.827           A[2] to COUT           y_d1_8__I_0_add_504_2
+Route         1   e 0.020                                  n1868
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_4
+Route         1   e 0.020                                  n1869
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_6
+Route         1   e 0.020                                  n1870
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_8
+Route         1   e 0.020                                  n1871
+FCI_TO_F    ---     0.598            CIN to S[2]           y_d1_8__I_0_add_504_10
+Route         2   e 1.486                                  term_b1[31]
+A1_TO_F     ---     0.493           B[2] to S[2]           add_189_25
+Route         2   e 1.486                                  dac_c_7
+                  --------
+                   19.984  (61.9% logic, 38.1% route), 21 logic levels.
+
+
+Error:  The following path violates requirements by 15.144ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             y_d1_i8  (from clk_c +)
+   Destination:    FD1S3AX    D              y_d1_i7  (to clk_c +)
+
+   Delay:                  19.984ns  (61.9% logic, 38.1% route), 21 logic levels.
+
+ Constraint Details:
+
+     19.984ns data_path y_d1_i8 to y_d1_i7 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 15.144ns
+
+ Path Details: y_d1_i8 to y_d1_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              y_d1_i8 (from clk_c)
+Route        24   e 1.896                                  y_d2[8]
+LUT4        ---     0.493              A to Z              i263_2_lut
+Route         1   e 0.941                                  n115
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_131_2
+Route         1   e 0.020                                  n1853
+FCI_TO_F    ---     0.598            CIN to S[2]           add_131_4
+Route         1   e 0.020                                  n204
+A1_TO_F     ---     0.493           A[2] to S[2]           add_130_4
+Route         1   e 0.020                                  n201
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_129_4
+Route         1   e 0.020                                  n1840
+FCI_TO_F    ---     0.598            CIN to S[2]           add_129_6
+Route         1   e 0.020                                  n290_adj_111
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_128_6
+Route         1   e 0.020                                  n1834
+FCI_TO_F    ---     0.598            CIN to S[2]           add_128_8
+Route         1   e 0.020                                  n379_adj_118
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_127_8
+Route         1   e 0.020                                  n1828
+FCI_TO_F    ---     0.598            CIN to S[2]           add_127_10
+Route         1   e 0.020                                  n468_adj_125
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_126_10
+Route         1   e 0.020                                  n1822
+FCI_TO_F    ---     0.598            CIN to S[2]           add_126_12
+Route         1   e 0.020                                  n557_adj_132
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_125_12
+Route         1   e 0.020                                  n1809
+FCI_TO_F    ---     0.598            CIN to S[2]           add_125_14
+Route         2   e 1.486                                  n647
+A1_TO_FCO   ---     0.827           A[2] to COUT           y_d1_8__I_0_add_504_2
+Route         1   e 0.020                                  n1868
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_4
+Route         1   e 0.020                                  n1869
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_6
+Route         1   e 0.020                                  n1870
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_8
+Route         1   e 0.020                                  n1871
+FCI_TO_F    ---     0.598            CIN to S[2]           y_d1_8__I_0_add_504_10
+Route         2   e 1.486                                  term_b1[31]
+A1_TO_F     ---     0.493           B[2] to S[2]           add_189_25
+Route         2   e 1.486                                  dac_c_7
+                  --------
+                   19.984  (61.9% logic, 38.1% route), 21 logic levels.
+
+
+Error:  The following path violates requirements by 15.144ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             y_d1_i8  (from clk_c +)
+   Destination:    FD1S3AX    D              y_d1_i7  (to clk_c +)
+
+   Delay:                  19.984ns  (61.9% logic, 38.1% route), 21 logic levels.
+
+ Constraint Details:
+
+     19.984ns data_path y_d1_i8 to y_d1_i7 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 15.144ns
+
+ Path Details: y_d1_i8 to y_d1_i7
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              y_d1_i8 (from clk_c)
+Route        24   e 1.896                                  y_d2[8]
+LUT4        ---     0.493              A to Z              i263_2_lut
+Route         1   e 0.941                                  n115
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_131_2
+Route         1   e 0.020                                  n1853
+FCI_TO_F    ---     0.598            CIN to S[2]           add_131_4
+Route         1   e 0.020                                  n204
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_130_4
+Route         1   e 0.020                                  n1847
+FCI_TO_F    ---     0.598            CIN to S[2]           add_130_6
+Route         1   e 0.020                                  n293
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_129_6
+Route         1   e 0.020                                  n1841
+FCI_TO_F    ---     0.598            CIN to S[2]           add_129_8
+Route         1   e 0.020                                  n382_adj_119
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_128_8
+Route         1   e 0.020                                  n1835
+FCI_TO_F    ---     0.598            CIN to S[2]           add_128_10
+Route         1   e 0.020                                  n471_adj_126
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_127_10
+Route         1   e 0.020                                  n1829
+FCI_TO_F    ---     0.598            CIN to S[2]           add_127_12
+Route         1   e 0.020                                  n560_adj_133
+A1_TO_F     ---     0.493           A[2] to S[2]           add_126_12
+Route         1   e 0.020                                  n557_adj_132
+A1_TO_FCO   ---     0.827           A[2] to COUT           add_125_12
+Route         1   e 0.020                                  n1809
+FCI_TO_F    ---     0.598            CIN to S[2]           add_125_14
+Route         2   e 1.486                                  n647
+A1_TO_FCO   ---     0.827           A[2] to COUT           y_d1_8__I_0_add_504_2
+Route         1   e 0.020                                  n1868
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_4
+Route         1   e 0.020                                  n1869
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_6
+Route         1   e 0.020                                  n1870
+FCI_TO_FCO  ---     0.157            CIN to COUT           y_d1_8__I_0_add_504_8
+Route         1   e 0.020                                  n1871
+FCI_TO_F    ---     0.598            CIN to S[2]           y_d1_8__I_0_add_504_10
+Route         2   e 1.486                                  term_b1[31]
+A1_TO_F     ---     0.493           B[2] to S[2]           add_189_25
+Route         2   e 1.486                                  dac_c_7
+                  --------
+                   19.984  (61.9% logic, 38.1% route), 21 logic levels.
+
+Warning: 20.144 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |     5.000 ns|    20.144 ns|    21 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n1868                                   |       1|    4081|     99.63%
+                                        |        |        |
+n647                                    |       2|    4076|     99.51%
+                                        |        |        |
+n1809                                   |       1|    3994|     97.51%
+                                        |        |        |
+n115                                    |       1|    3842|     93.80%
+                                        |        |        |
+n1853                                   |       1|    3776|     92.19%
+                                        |        |        |
+n1869                                   |       1|    3292|     80.37%
+                                        |        |        |
+n557_adj_132                            |       1|    3282|     80.13%
+                                        |        |        |
+n204                                    |       1|    3090|     75.44%
+                                        |        |        |
+n1870                                   |       1|    2552|     62.30%
+                                        |        |        |
+dac_c_7                                 |       2|    2515|     61.40%
+                                        |        |        |
+n1822                                   |       1|    2172|     53.03%
+                                        |        |        |
+n468_adj_125                            |       1|    2076|     50.68%
+                                        |        |        |
+y_d2[8]                                 |      24|    2027|     49.49%
+                                        |        |        |
+n1847                                   |       1|    1995|     48.71%
+                                        |        |        |
+y_d2[7]                                 |      22|    1942|     47.41%
+                                        |        |        |
+n293                                    |       1|    1915|     46.75%
+                                        |        |        |
+n1871                                   |       1|    1900|     46.39%
+                                        |        |        |
+n1969                                   |       1|    1852|     45.21%
+                                        |        |        |
+n379_adj_118                            |       1|    1669|     40.75%
+                                        |        |        |
+term_b1[31]                             |       2|    1616|     39.45%
+                                        |        |        |
+n290_adj_111                            |       1|    1562|     38.13%
+                                        |        |        |
+n382_adj_119                            |       1|    1520|     37.11%
+                                        |        |        |
+n1828                                   |       1|    1485|     36.25%
+                                        |        |        |
+n1970                                   |       1|    1481|     36.16%
+                                        |        |        |
+n471_adj_126                            |       1|    1400|     34.18%
+                                        |        |        |
+n1968                                   |       1|    1358|     33.15%
+                                        |        |        |
+n1841                                   |       1|    1336|     32.62%
+                                        |        |        |
+n201                                    |       1|    1325|     32.35%
+                                        |        |        |
+n1834                                   |       1|    1250|     30.52%
+                                        |        |        |
+n560_adj_133                            |       1|    1126|     27.49%
+                                        |        |        |
+n1835                                   |       1|    1099|     26.83%
+                                        |        |        |
+n1840                                   |       1|    1017|     24.83%
+                                        |        |        |
+n1829                                   |       1|     845|     20.63%
+                                        |        |        |
+n1821                                   |       1|     660|     16.11%
+                                        |        |        |
+n376_adj_117                            |       1|     652|     15.92%
+                                        |        |        |
+n1848                                   |       1|     624|     15.23%
+                                        |        |        |
+n1967                                   |       1|     617|     15.06%
+                                        |        |        |
+n385                                    |       1|     616|     15.04%
+                                        |        |        |
+term_b1[16]                             |       1|     602|     14.70%
+                                        |        |        |
+y_full[24]                              |       1|     582|     14.21%
+                                        |        |        |
+term_b1[18]                             |       1|     578|     14.11%
+                                        |        |        |
+n287_adj_110                            |       1|     544|     13.28%
+                                        |        |        |
+n1808                                   |       1|     536|     13.09%
+                                        |        |        |
+n1827                                   |       1|     520|     12.70%
+                                        |        |        |
+n1854                                   |       1|     520|     12.70%
+                                        |        |        |
+term_b1[20]                             |       1|     509|     12.43%
+                                        |        |        |
+n474_adj_127                            |       1|     504|     12.30%
+                                        |        |        |
+n465_adj_124                            |       1|     496|     12.11%
+                                        |        |        |
+n296                                    |       1|     480|     11.72%
+                                        |        |        |
+n1842                                   |       1|     480|     11.72%
+                                        |        |        |
+dac_c_5                                 |       2|     428|     10.45%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 56588905
+
+Constraints cover  14608396 paths, 732 nets, and 1064 connections (72.8% coverage)
+
+
+Peak memory: 80896000 bytes, TRCE: 16203776 bytes, DLYMAN: 163840 bytes
+CPU_TIME_REPORT: 0 secs 

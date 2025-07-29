@@ -1,0 +1,10 @@
+---------------------------------------------------
+Report for cell IIR
+   Instance path: IIR
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     360.00        100.0
+                                  LUT4	      36.00        100.0
+                                 IOBUF	         20        100.0
+                                PFUREG	         74        100.0
+                                RIPPLE	        341        100.0

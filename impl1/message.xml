@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001200</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>IIR</Dynamic>
+        </Message>
+        <Message>
+            <ID>35901208</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(55): </Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
+            <Navigation>55</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(75): </Dynamic>
+            <Dynamic>x</Dynamic>
+            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
+            <Navigation>75</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(8): </Dynamic>
+            <Dynamic>IIR</Dynamic>
+            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(90): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
+            <Navigation>90</Navigation>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>x_d1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>x_d2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/codefield/verilog/diamond_design/iir_2/source/iir.v(108): </Dynamic>
+            <Dynamic>x_d1_ret3_i24</Dynamic>
+            <Navigation>d:/codefield/verilog/diamond_design/iir_2/source/iir.v</Navigation>
+            <Navigation>108</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo2c00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>
